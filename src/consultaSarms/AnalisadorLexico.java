@@ -2,6 +2,7 @@ package consultaSarms;
 
 import java.util.ArrayList;
 import java.util.List;
+import indexacaoCaue.Normalizador;
 
 public class AnalisadorLexico {
     public static List<TokenConsulta> tokenizar(String consulta) {

@@ -1,4 +1,4 @@
-package indexacao;
+package indexacaoCaue;
 
 public class Tokenizador {
 

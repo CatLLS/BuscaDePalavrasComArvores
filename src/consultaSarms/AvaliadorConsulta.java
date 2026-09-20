@@ -1,10 +1,21 @@
 package consultaSarms;
 
+import estruturaCat.ListaArquivos;
+import indexacaoCaue.Indice;
+
 public class AvaliadorConsulta {
     private final Indice indice; 
 
     public AvaliadorConsulta(Indice indice) {
         this.indice = indice;
+    }
+
+    public ListaArquivos consultar(String consulta) throws ConsultaInvalidaException {
+        try {
+            return avaliar(new AnalisadorSintatico(AnalisadorLexico.tokenizar(consulta)).analisar());
+        } catch (IllegalArgumentException e) {
+            throw new ConsultaInvalidaException(e.getMessage(), e);
+        }
     }
 
     // Percurso pós-ordem: resolve recursivamente os ramos filhos antes da raiz,

@@ -1,7 +1,7 @@
-package indexacao;
+package indexacaoCaue;
 
-import estrutura.ArvoreTernaria;
-import estrutura.ListaArquivos;
+import estruturaCat.ArvoreTernaria;
+import estruturaCat.ListaArquivos;
 import java.io.File;
 
 public class Indexador {
@@ -15,7 +15,7 @@ public class Indexador {
 
         Indice indice = new Indice();
         indice.arvore = new ArvoreTernaria();
-        indice.todosOsDocumentos = new ListaArquivos();
+        indice.definirTodosOsDocumentos(new ListaArquivos());
 
         String[] arquivos = LeitorArquivos.listarTxt(caminhoPasta);
         if (arquivos.length == 0) {
@@ -30,7 +30,7 @@ public class Indexador {
 
         for (String nomeArquivo : arquivos) {
             // Garante que o arquivo existe no universo para operações de negação (NAO)
-            indice.todosOsDocumentos.adicionar(nomeArquivo);
+            indice.getTodosOsDocumentos().adicionar(nomeArquivo);
             indice.qtdArquivos++;
 
             File arq = new File(pasta, nomeArquivo);

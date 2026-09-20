@@ -1,4 +1,6 @@
-class ListaArquivos {//auxiliar para o nó
+package estruturaCat;
+
+public class ListaArquivos {//auxiliar para o nó
     private static final int CAPACIDADE_INICIAL = 4;
  
     private String[] dados;

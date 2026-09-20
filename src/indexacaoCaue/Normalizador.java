@@ -1,4 +1,4 @@
-package indexacao;
+package indexacaoCaue;
 
 import java.text.Normalizer;
 import java.util.Locale;

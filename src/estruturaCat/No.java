@@ -1,5 +1,7 @@
 
 
+package estruturaCat;
+
 class No{
     public char caractere; //professor não pediu getters setters e não especificou se precisava ser privado, portanto é público por questões de tempo.
     public No esquerda,meio,direita;
@@ -9,10 +11,10 @@ class No{
     public No(char c){
         this.caractere=c;// PRÉ : c é um caractere já normalizado (minúsculo, sem pontuação).
         fimDaPalavra = false;
-        esquerda = NULL;
-        meio = NULL;
-        direita=NULL;
-        ListaArquivos = NULL;
+        esquerda = null;
+        meio = null;
+        direita = null;
+        arquivos = null;
 
     }
 }

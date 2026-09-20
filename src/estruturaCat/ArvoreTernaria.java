@@ -1,4 +1,6 @@
-class ArvoreTernaria {
+package estruturaCat;
+
+public class ArvoreTernaria {
     private No raiz;
     private int qtdPalavras;
     private int qtdNos;
