@@ -7,7 +7,12 @@ class No{
     public ListaArquivos arquivos;//só tem nos nós de fim de palavra, fizemos com uma classe auxiliar criada aqui
 
     public No(char c){
-        this.caractere=c;
+        this.caractere=c;// PRÉ : c é um caractere já normalizado (minúsculo, sem pontuação).
         fimDaPalavra = false;
+        esquerda = NULL;
+        meio = NULL;
+        direita=NULL;
+        ListaArquivos = NULL;
+
     }
 }
